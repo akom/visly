@@ -1,754 +1,282 @@
-/* ============================================
-   VISLY conceito — Moda Feminina Juvenil
-   Paleta: Rosa claro #F5C2BC | Preto #1A1A1A | Branco #FFFFFF
-   ============================================ */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VISLY conceito - Moda Feminina Juvenil em Francisco Morato. Roupas estilosas com entrega via mototboy e estações." />
+  <meta name="theme-color" content="#F5C2BC" />
+  <title>VISLY conceito | Moda Feminina Juvenil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-/* --- RESET & BASE --- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo-link">
+        <img src="images/logo.png" alt="VISLY conceito" class="logo-img" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#colecao" class="nav-link">Coleção</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#entrega" class="nav-link">Entrega</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-:root {
-  --pink:        #F5C2BC;
-  --pink-dark:   #E8A8A0;
-  --pink-light:  #FDF0EE;
-  --pink-mid:    #F9DEDA;
-  --black:       #1A1A1A;
-  --black-soft:  #333333;
-  --gray:        #888888;
-  --white:       #FFFFFF;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --radius:      16px;
-  --radius-sm:   10px;
-  --shadow:      0 4px 24px rgba(26,26,26,.10);
-  --shadow-lg:   0 8px 40px rgba(26,26,26,.14);
-  --transition:  .25s ease;
-}
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="hero-badge">Nova Coleção 2025</span>
+      <h1 class="hero-title">Moda que <em>fala</em><br />por você</h1>
+      <p class="hero-sub">Peças exclusivas para meninas que têm estilo próprio.<br />Do básico ao fashionista — tudo em um só lugar.</p>
+      <div class="hero-actions">
+        <a href="#colecao" class="btn btn-primary">Ver Coleção</a>
+        <a href="https://www.instagram.com/vislyconceito" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @vislyconceito
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <span class="sparkle top-left">✦</span>
+          <span class="sparkle top-right">✦</span>
+          <img src="images/logo.png" alt="VISLY conceito" class="hero-logo-big" />
+          <p class="hero-tagline">Moda Feminina Juvenil</p>
+          <span class="sparkle bottom-left">✦</span>
+          <span class="sparkle bottom-right">✦</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-html { scroll-behavior: smooth; }
+  <!-- DESTAQUES RÁPIDOS -->
+  <section class="highlights">
+    <div class="container">
+      <div class="highlight-item">
+        <span class="highlight-icon">🛵</span>
+        <div>
+          <strong>Entrega Rápida</strong>
+          <small>Motoboy e Estações</small>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-icon">💬</span>
+        <div>
+          <strong>Atendimento no WhatsApp</strong>
+          <small>Resposta rápida</small>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-icon">📍</span>
+        <div>
+          <strong>Francisco Morato</strong>
+          <small>Enviamos para toda região</small>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-icon">✨</span>
+        <div>
+          <strong>Peças Selecionadas</strong>
+          <small>Estilo e qualidade</small>
+        </div>
+      </div>
+    </div>
+  </section>
 
-body {
-  font-family: var(--font-body);
-  background: var(--white);
-  color: var(--black);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+  <!-- COLEÇÃO -->
+  <section class="colecao" id="colecao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Coleção</span>
+        <h2 class="section-title">Peças em Destaque</h2>
+        <p class="section-sub">Confira algumas das nossas peças favoritas — para cada estilo e ocasião.</p>
+      </div>
 
-img { display: block; max-width: 100%; }
-a { text-decoration: none; color: inherit; }
+      <div class="products-grid products-grid--duo">
 
-.container {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+        <!-- Produto 1 — Cropped Rubi -->
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="produtos/001.png" alt="Cropped Rubi" class="product-img" />
+            <span class="product-tag">Novo</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Cropped Rubi</h3>
+            <p class="product-desc">Cropped assimétrico em tule com detalhe bicolor preto e branco</p>
+            <div class="product-footer">
+              <span class="product-price">R$ 59,90</span>
+              <a href="https://wa.me/551967014079?text=Olá! Tenho interesse no Cropped Rubi 🖤" target="_blank" rel="noopener" class="btn-buy">Pedir agora</a>
+            </div>
+          </div>
+        </div>
 
-/* --- TYPOGRAPHY --- */
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; }
-em { font-style: italic; color: var(--pink-dark); }
+        <!-- Produto 2 — Cropped Polaris -->
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="produtos/002.png" alt="Cropped Polaris" class="product-img" />
+            <span class="product-tag tag-hot">Hot</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Cropped Polaris</h3>
+            <p class="product-desc">Cropped com amarração lateral — disponível em azul marinho e preto</p>
+            <div class="product-footer">
+              <span class="product-price">R$ 59,90</span>
+              <a href="https://wa.me/551967014079?text=Olá! Tenho interesse no Cropped Polaris 💙" target="_blank" rel="noopener" class="btn-buy">Pedir agora</a>
+            </div>
+          </div>
+        </div>
 
-/* ============================================
-   HEADER
-   ============================================ */
-.header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(253,240,238,.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid transparent;
-  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
-}
-.header.scrolled {
-  background: rgba(253,240,238,.98);
-  border-bottom-color: var(--pink-mid);
-  box-shadow: 0 2px 16px rgba(26,26,26,.08);
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 12px 20px;
-}
-.logo-img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-.nav {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-.nav-link {
-  font-size: .9rem;
-  font-weight: 500;
-  color: var(--black-soft);
-  letter-spacing: .02em;
-  position: relative;
-  transition: color var(--transition);
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -3px; left: 0; right: 100%;
-  height: 2px;
-  background: var(--pink-dark);
-  transition: right var(--transition);
-}
-.nav-link:hover { color: var(--black); }
-.nav-link:hover::after { right: 0; }
+      </div>
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--black);
-  border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
-}
-.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      <div class="colecao-cta">
+        <p>Quer ver mais peças? Acessa nosso Instagram!</p>
+        <a href="https://www.instagram.com/vislyconceito" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Ver no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
 
-/* ============================================
-   BUTTONS
-   ============================================ */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 28px;
-  border-radius: 50px;
-  font-size: .9rem;
-  font-weight: 600;
-  letter-spacing: .03em;
-  cursor: pointer;
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
-}
-.btn:active { transform: scale(.97); }
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-visual">
+        <div class="sobre-img-wrap">
+          <img src="images/logo.png" alt="VISLY conceito" class="sobre-logo" />
+          <div class="sobre-badge-float">Moda Feminina Juvenil</div>
+        </div>
+      </div>
+      <div class="sobre-text">
+        <span class="section-badge">Quem somos</span>
+        <h2 class="section-title">Feito para meninas<br />que têm <em>atitude</em></h2>
+        <p>A <strong>VISLY conceito</strong> nasceu do amor pela moda feminina jovem. Somos uma loja especializada em peças que misturam estilo, personalidade e conforto — tudo pensado para você que não tem medo de se expressar.</p>
+        <p>Baseada em <strong>Francisco Morato</strong>, atendemos pela internet e pelo Instagram, levando moda de qualidade até você com praticidade e agilidade.</p>
+        <ul class="sobre-lista">
+          <li>✦ Peças selecionadas com cuidado</li>
+          <li>✦ Atendimento personalizado</li>
+          <li>✦ Entrega para toda a região</li>
+          <li>✦ Novas coleções com frequência</li>
+        </ul>
+        <a href="https://www.instagram.com/vislyconceito" target="_blank" rel="noopener" class="btn btn-primary">Seguir no Instagram</a>
+      </div>
+    </div>
+  </section>
 
-.btn-primary {
-  background: var(--black);
-  color: var(--white);
-  box-shadow: 0 4px 16px rgba(26,26,26,.2);
-}
-.btn-primary:hover {
-  background: var(--black-soft);
-  box-shadow: 0 6px 24px rgba(26,26,26,.3);
-  transform: translateY(-2px);
-}
+  <!-- ENTREGA -->
+  <section class="entrega" id="entrega">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Logística</span>
+        <h2 class="section-title">Como recebo meu pedido?</h2>
+        <p class="section-sub">Facilitamos para você receber suas peças de forma rápida e segura.</p>
+      </div>
+      <div class="entrega-grid">
+        <div class="entrega-card">
+          <div class="entrega-icon">🛵</div>
+          <h3>Motoboy</h3>
+          <p>Entregamos na sua porta pelo motoboy. Consulte disponibilidade e frete para sua região via WhatsApp.</p>
+        </div>
+        <div class="entrega-card">
+          <div class="entrega-icon">🚉</div>
+          <h3>Estações</h3>
+          <p>Retire seu pedido em pontos de coleta estratégicos nas estações. Rápido, fácil e sem taxa adicional.</p>
+        </div>
+        <div class="entrega-card">
+          <div class="entrega-icon">📦</div>
+          <h3>Como pedir?</h3>
+          <p>Escolha a peça, entre em contato pelo WhatsApp, combine a forma de entrega e pronto! Simples assim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.btn-outline {
-  background: transparent;
-  color: var(--black);
-  border: 2px solid var(--black);
-}
-.btn-outline:hover {
-  background: var(--black);
-  color: var(--white);
-  transform: translateY(-2px);
-}
+  <!-- CONTATO / CTA -->
+  <section class="contato" id="contato">
+    <div class="container contato-inner">
+      <div class="contato-text">
+        <span class="section-badge light">Fale Conosco</span>
+        <h2 class="contato-title">Pronta para<br />renovar o guarda-roupa?</h2>
+        <p>Manda uma mensagem! A gente te ajuda a escolher as melhores peças para o seu estilo.</p>
+        <div class="contato-info">
+          <a href="https://wa.me/551967014079" target="_blank" rel="noopener" class="contato-row">
+            <span class="contato-icon">💬</span>
+            <span>+55 19 96701-4079</span>
+          </a>
+          <a href="https://www.instagram.com/vislyconceito" target="_blank" rel="noopener" class="contato-row">
+            <span class="contato-icon">📸</span>
+            <span>@vislyconceito</span>
+          </a>
+          <div class="contato-row">
+            <span class="contato-icon">📍</span>
+            <span>Francisco Morato, SP</span>
+          </div>
+        </div>
+      </div>
+      <div class="contato-actions">
+        <a href="https://wa.me/551967014079?text=Olá! Vim pelo site da VISLY e quero saber mais sobre as peças 🌸" target="_blank" rel="noopener" class="btn-whatsapp">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a href="https://www.instagram.com/vislyconceito" target="_blank" rel="noopener" class="btn-instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Ver no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
 
-/* ============================================
-   HERO
-   ============================================ */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 48px;
-  padding: 120px 20px 80px;
-  max-width: 1140px;
-  margin: 0 auto;
-}
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="images/logo.png" alt="VISLY conceito" class="footer-logo" />
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#colecao">Coleção</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#entrega">Entrega</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <p class="footer-copy">© 2025 VISLY conceito · Moda Feminina Juvenil · Francisco Morato, SP</p>
+    </div>
+  </footer>
 
-.hero-content { flex: 1; max-width: 520px; }
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/551967014079?text=Olá! Vim pelo site da VISLY e quero saber mais sobre as peças 🌸" class="fab-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
-.hero-badge {
-  display: inline-block;
-  background: var(--pink-mid);
-  color: var(--black-soft);
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 20px;
-}
-
-.hero-title {
-  font-size: clamp(2.6rem, 6vw, 4.2rem);
-  color: var(--black);
-  margin-bottom: 20px;
-  line-height: 1.1;
-}
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: var(--gray);
-  margin-bottom: 36px;
-  line-height: 1.7;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* Hero visual */
-.hero-visual { flex: 0 0 420px; }
-
-.hero-card {
-  background: var(--pink-light);
-  border-radius: 32px;
-  padding: 4px;
-  box-shadow: var(--shadow-lg);
-}
-.hero-card-inner {
-  background: var(--pink);
-  border-radius: 28px;
-  padding: 48px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-  overflow: hidden;
-}
-.hero-logo-big {
-  width: 260px;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(26,26,26,.12));
-}
-.hero-tagline {
-  font-size: .85rem;
-  font-weight: 500;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--black-soft);
-  opacity: .7;
-}
-.sparkle {
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: .5;
-  animation: sparkle 3s ease-in-out infinite;
-}
-.sparkle.top-left    { top: 16px; left: 20px; animation-delay: 0s; }
-.sparkle.top-right   { top: 16px; right: 20px; animation-delay: .8s; }
-.sparkle.bottom-left { bottom: 16px; left: 20px; animation-delay: 1.6s; }
-.sparkle.bottom-right{ bottom: 16px; right: 20px; animation-delay: 2.4s; }
-
-@keyframes sparkle {
-  0%, 100% { opacity: .3; transform: scale(1); }
-  50%       { opacity: .8; transform: scale(1.3); }
-}
-
-/* ============================================
-   HIGHLIGHTS
-   ============================================ */
-.highlights {
-  background: var(--black);
-  padding: 24px 0;
-}
-.highlights .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.highlight-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 28px;
-  color: var(--white);
-  border-right: 1px solid rgba(255,255,255,.1);
-}
-.highlight-item:last-child { border-right: none; }
-.highlight-icon { font-size: 1.5rem; }
-.highlight-item strong { display: block; font-size: .88rem; font-weight: 600; }
-.highlight-item small  { display: block; font-size: .75rem; opacity: .6; }
-
-/* ============================================
-   COLEÇÃO
-   ============================================ */
-.colecao {
-  padding: 100px 0 80px;
-  background: var(--white);
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 56px;
-}
-.section-badge {
-  display: inline-block;
-  background: var(--pink-mid);
-  color: var(--black-soft);
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 50px;
-  margin-bottom: 12px;
-}
-.section-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: var(--black);
-  margin-bottom: 12px;
-}
-.section-sub {
-  font-size: 1rem;
-  color: var(--gray);
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* Products grid */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.product-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: transform var(--transition), box-shadow var(--transition);
-  border: 1px solid rgba(245,194,188,.3);
-}
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.product-image-wrap {
-  position: relative;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-}
-.product-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--ph-color, var(--pink-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition);
-}
-.product-card:hover .product-placeholder { transform: scale(1.04); }
-.product-icon { font-size: 4rem; }
-
-.product-tag {
-  position: absolute;
-  top: 14px; left: 14px;
-  background: var(--black);
-  color: var(--white);
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 50px;
-}
-.product-tag.tag-hot  { background: #E05252; }
-.product-tag.tag-new  { background: #5E8E4A; }
-
-.product-info {
-  padding: 20px;
-}
-.product-name {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  margin-bottom: 4px;
-  color: var(--black);
-}
-.product-desc {
-  font-size: .83rem;
-  color: var(--gray);
-  margin-bottom: 16px;
-}
-.product-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-.product-price {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--black);
-}
-.btn-buy {
-  background: var(--pink);
-  color: var(--black);
-  font-size: .78rem;
-  font-weight: 700;
-  padding: 8px 16px;
-  border-radius: 50px;
-  letter-spacing: .04em;
-  transition: background var(--transition), transform var(--transition);
-  white-space: nowrap;
-}
-.btn-buy:hover {
-  background: var(--pink-dark);
-  transform: scale(1.04);
-}
-
-.colecao-cta {
-  text-align: center;
-  margin-top: 56px;
-}
-.colecao-cta p {
-  font-size: 1rem;
-  color: var(--gray);
-  margin-bottom: 16px;
-}
-
-/* ============================================
-   SOBRE
-   ============================================ */
-.sobre {
-  padding: 100px 0;
-  background: var(--pink-light);
-}
-.sobre-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.sobre-img-wrap {
-  background: var(--pink);
-  border-radius: 32px;
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-}
-.sobre-logo {
-  width: 100%;
-  max-width: 280px;
-}
-.sobre-badge-float {
-  background: var(--black);
-  color: var(--white);
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 8px 20px;
-  border-radius: 50px;
-}
-.sobre-text .section-title { margin-bottom: 20px; }
-.sobre-text p {
-  color: var(--black-soft);
-  margin-bottom: 16px;
-  font-size: .97rem;
-  line-height: 1.75;
-}
-.sobre-lista {
-  list-style: none;
-  margin: 24px 0 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.sobre-lista li {
-  font-size: .92rem;
-  color: var(--black-soft);
-  font-weight: 500;
-}
-
-/* ============================================
-   ENTREGA
-   ============================================ */
-.entrega {
-  padding: 100px 0;
-  background: var(--white);
-}
-.entrega-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.entrega-card {
-  background: var(--pink-light);
-  border-radius: var(--radius);
-  padding: 36px 28px;
-  text-align: center;
-  border: 1px solid var(--pink-mid);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.entrega-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
-}
-.entrega-icon {
-  font-size: 2.8rem;
-  margin-bottom: 16px;
-}
-.entrega-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.entrega-card p {
-  font-size: .88rem;
-  color: var(--gray);
-  line-height: 1.7;
-}
-
-/* ============================================
-   CONTATO
-   ============================================ */
-.contato {
-  padding: 100px 0;
-  background: var(--black);
-  color: var(--white);
-}
-.contato-inner {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 64px;
-  align-items: center;
-}
-.section-badge.light {
-  background: rgba(245,194,188,.2);
-  color: var(--pink);
-}
-.contato-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: var(--white);
-  margin: 12px 0 16px;
-}
-.contato .contato-text p {
-  color: rgba(255,255,255,.6);
-  margin-bottom: 32px;
-  font-size: .97rem;
-}
-.contato-info {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.contato-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: .95rem;
-  color: rgba(255,255,255,.85);
-  transition: color var(--transition);
-}
-a.contato-row:hover { color: var(--pink); }
-.contato-icon { font-size: 1.2rem; }
-
-.contato-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-width: 220px;
-}
-.btn-whatsapp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #25D366;
-  color: var(--white);
-  font-size: .9rem;
-  font-weight: 700;
-  padding: 16px 28px;
-  border-radius: 50px;
-  transition: background var(--transition), transform var(--transition);
-  box-shadow: 0 4px 20px rgba(37,211,102,.3);
-}
-.btn-whatsapp:hover {
-  background: #1ebe5a;
-  transform: translateY(-2px);
-}
-.btn-instagram {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: transparent;
-  color: var(--white);
-  font-size: .9rem;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.25);
-  transition: border-color var(--transition), background var(--transition), transform var(--transition);
-}
-.btn-instagram:hover {
-  border-color: var(--pink);
-  background: rgba(245,194,188,.1);
-  transform: translateY(-2px);
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.footer {
-  background: #111111;
-  padding: 40px 0;
-}
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.footer-logo {
-  height: 40px;
-  object-fit: contain;
-  opacity: .7;
-  filter: brightness(2) saturate(0);
-}
-.footer-links {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer-links a {
-  font-size: .83rem;
-  color: rgba(255,255,255,.45);
-  transition: color var(--transition);
-}
-.footer-links a:hover { color: var(--pink); }
-.footer-copy {
-  font-size: .78rem;
-  color: rgba(255,255,255,.3);
-  text-align: center;
-}
-
-/* ============================================
-   FAB WHATSAPP
-   ============================================ */
-.fab-whatsapp {
-  position: fixed;
-  bottom: 24px; right: 24px;
-  z-index: 200;
-  width: 58px; height: 58px;
-  background: #25D366;
-  color: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(37,211,102,.45);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.fab-whatsapp:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(37,211,102,.6);
-}
-
-/* ============================================
-   RESPONSIVE — TABLET (≤900px)
-   ============================================ */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    padding: 100px 20px 60px;
-    text-align: center;
-    min-height: auto;
-  }
-  .hero-content { max-width: 100%; }
-  .hero-actions { justify-content: center; }
-  .hero-visual { width: 100%; max-width: 360px; }
-
-  .products-grid    { grid-template-columns: repeat(2, 1fr); }
-  .sobre-grid       { grid-template-columns: 1fr; }
-  .sobre-visual     { max-width: 400px; margin: 0 auto; }
-  .entrega-grid     { grid-template-columns: 1fr; }
-  .contato-inner    { grid-template-columns: 1fr; }
-  .contato-actions  { flex-direction: row; flex-wrap: wrap; }
-
-  .highlight-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); width: 50%; }
-  .highlight-item:last-child, .highlight-item:nth-child(3) { border-bottom: none; }
-}
-
-/* ============================================
-   RESPONSIVE — MOBILE (≤600px)
-   ============================================ */
-@media (max-width: 600px) {
-  /* Header / Nav */
-  .hamburger { display: flex; }
-  .nav {
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    flex-direction: column;
-    background: rgba(253,240,238,.98);
-    backdrop-filter: blur(12px);
-    padding: 0 20px;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .35s ease, padding .35s ease;
-    border-bottom: 1px solid var(--pink-mid);
-  }
-  .nav.open { max-height: 320px; padding: 12px 20px 20px; }
-  .nav-link { padding: 12px 0; width: 100%; border-bottom: 1px solid var(--pink-mid); font-size: 1rem; }
-  .nav-link:last-child { border-bottom: none; }
-  .nav-link::after { display: none; }
-
-  /* Hero */
-  .hero-visual { max-width: 100%; }
-  .hero-card-inner { padding: 36px 24px; }
-  .hero-logo-big { width: 180px; }
-
-  /* Products */
-  .products-grid { grid-template-columns: 1fr; }
-
-  /* Highlights */
-  .highlight-item { width: 100%; border-right: none; justify-content: center; }
-
-  /* Sobre */
-  .sobre-img-wrap { padding: 32px 24px; }
-
-  /* Contato */
-  .contato-inner  { gap: 40px; }
-  .contato-actions { flex-direction: column; }
-  .btn-whatsapp, .btn-instagram { width: 100%; }
-
-  /* Footer */
-  .footer-links { gap: 16px; }
-
-  /* FAB */
-  .fab-whatsapp { bottom: 16px; right: 16px; width: 52px; height: 52px; }
-}
-
-/* ============================================
-   SMOOTH SCROLL OFFSET FOR FIXED HEADER
-   ============================================ */
-section[id] { scroll-margin-top: 72px; }
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    // Close nav on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+</body>
+</html>
